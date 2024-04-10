@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    background-color: #fff; 
+    z-index: 1000; 
+    padding: 10px; 
+  }
+  
+  
+  header p {
+    text-align: center; 
+    margin: 0; 
+    padding: 5px 0; 
+  }
+  
+  
+  body {
+    padding-top: 60px; 
+  }
+  

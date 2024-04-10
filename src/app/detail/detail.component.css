@@ -1,0 +1,32 @@
+/* detail.component.css */
+
+.detail-container {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.song-nav {
+  display: flex;
+  overflow-x: auto;
+}
+
+.song-details-landscape,
+.song-details-portrait {
+  display: none;
+}
+
+/* Styles for the Portrait mode */
+@media screen and (max-aspect-ratio: 1/1) {
+  .song-details-portrait {
+    display: block;
+  }
+}
+
+/* Styles for the Landscape mode */
+@media screen and (min-aspect-ratio: 1/1) {
+  .song-details-landscape {
+    display: flex;
+  }
+}
+

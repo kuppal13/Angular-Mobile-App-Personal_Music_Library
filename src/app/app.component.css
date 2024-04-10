@@ -1,0 +1,119 @@
+/* app.component.css */
+/* Base styles */
+/* app.component.css */
+/* Base styles */
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Use full viewport height */
+  font-family: Arial, sans-serif; /* Example font */
+}
+
+/* Header and Footer styles */
+.app-header,
+.app-footer {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+
+.detail-container {
+
+  flex-grow: 1;
+  margin-top: 50px;
+}
+
+
+/* Navigation section */
+.song-nav {
+  display: flex;
+  overflow-x: auto;
+  background-color: #f2f2f2;
+  padding: 5px 0;
+}
+
+.song-nav button {
+  flex: none; /* Do not grow or shrink */
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.song-nav button:focus,
+.song-nav button:hover {
+  background-color: #0056b3;
+}
+
+/* Landscape and Portrait Views */
+.song-details-landscape,
+.song-details-portrait {
+  padding: 10px;
+  display: none; /* Hidden by default */
+}
+
+/* Landscape mode */
+@media screen and (orientation: landscape) {
+  .song-details-landscape {
+    display: flex; /* Shown in landscape mode */
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .song-details-landscape .song-picture img {
+    max-height: 200px;
+  }
+}
+
+/* Portrait mode */
+@media screen and (orientation: portrait) {
+  .song-details-portrait {
+    display: block; /* Shown in portrait mode */
+  }
+
+  .song-details-portrait .song-info,
+  .song-details-portrait .song-picture {
+    text-align: center;
+  }
+
+  .song-details-portrait .song-picture img {
+    max-width: 100%;
+  }
+}
+
+/* Song info styles */
+.song-info h2 {
+  margin-top: 0;
+}
+
+.song-info p {
+  margin: 5px 0;
+}
+
+/* Responsive font sizes */
+@media screen and (max-width: 320px) {
+  .song-nav button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Ensuring minimal whitespace and appropriate scrolling */
+.detail-container {
+  overflow-y: auto;
+}
+
+/* Adjust button width for smaller screens */
+@media screen and (max-width: 640px) {
+  .song-nav button {
+    white-space: nowrap;
+    padding: 5px 10px;
+  }
+}

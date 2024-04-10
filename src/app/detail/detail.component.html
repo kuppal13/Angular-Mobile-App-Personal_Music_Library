@@ -1,0 +1,21 @@
+<!-- detail.component.html -->
+<div class="detail-container">
+  <!-- ... other parts of your template ... -->
+
+  <!-- Detail View for Landscape -->
+  <div class="song-details-landscape" *ngIf="selectedSong">
+    <!-- Picture Area -->
+    <div class="song-picture">
+      <img [src]="selectedSong?.picture" [alt]="selectedSong?.songName">
+    </div>
+    <!-- Song Details Area -->
+    <div class="song-info">
+      <h2>{{ selectedSong?.songName }}</h2>
+      <p>Artist: {{ selectedSong?.artist }}</p>
+      <p>Genre: {{ selectedSong?.genre }}</p>
+      <p>Year Released: {{ selectedSong?.yearReleased }}</p>
+    </div>
+  </div>
+
+  <!-- ... -->
+</div>
